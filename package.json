@@ -1,0 +1,33 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "Szablon aplikacji",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --declaration",
+    "test": "jest --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/preterer/template.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "Michał Baranowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/preterer/template/issues"
+  },
+  "homepage": "https://github.com/preterer/template#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
