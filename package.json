@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "@preterer/typeorm-extensions",
   "version": "1.0.0",
-  "description": "Szablon aplikacji",
+  "description": "Typeorm common extensions",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --declaration",
@@ -10,22 +10,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/preterer/template.git"
+    "url": "git+ssh://git@github.com/preterer/typeorm-extensions.git"
   },
   "keywords": [
-    "template"
+    "library",
+    "typeorm",
+    "plugin"
   ],
   "author": "Michał Baranowski",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/preterer/template/issues"
+    "url": "https://github.com/preterer/typeorm-extensions/issues"
   },
-  "homepage": "https://github.com/preterer/template#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/preterer/typeorm-extensions#readme",
+  "dependencies": {
+    "typedi": "^0.8.0",
+    "typeorm": "^0.2.18",
+    "typeorm-typedi-extensions": "^0.2.3"
+  },
   "devDependencies": {
     "@types/express": "^4.17.1",
     "@types/jest": "^24.0.18",
     "jest": "^24.9.0",
+    "sql.js": "0.5.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
