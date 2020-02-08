@@ -38,6 +38,17 @@ export abstract class EntityService<Entity extends CoreEntity, Model = object> {
   }
 
   /**
+   * Gets count of entities matching given filters
+   *
+   * @param {Filters} [filters]
+   * @returns {Promise<number>}
+   * @memberof EntityService
+   */
+  count(filters?: Filters): Promise<number> {
+    return this.repository.filter(filters).getCount();
+  }
+
+  /**
    * Gets entity by id
    *
    * @param {number} id
@@ -98,8 +109,8 @@ export abstract class EntityService<Entity extends CoreEntity, Model = object> {
    * @returns {Promise<void>}
    * @memberof EntityService
    */
-  async deleteMultiple(ids: number[]): Promise<void> {
-    this.repository.delete(ids);
+  deleteMultiple(ids: number[]): Promise<void> {
+    return this.repository.delete(ids).then(() => undefined);
   }
 
   /**

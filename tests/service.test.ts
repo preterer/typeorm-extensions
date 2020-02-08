@@ -58,6 +58,18 @@ describe("Entity service", function() {
     });
   });
 
+  describe("count", function() {
+    it("should get entites count", async function() {
+      const count = await testService.count();
+      expect(count).toEqual(amounts);
+    });
+
+    it("should get entities count with filters", async function() {
+      const count = await testService.count({ search: "whatever, it's not important anyway" });
+      expect(count).toEqual(amounts);
+    });
+  });
+
   describe("add", function() {
     it("should add a new entity", async function() {
       const entity = await testService.add({ name: "test" });
